@@ -13,6 +13,8 @@
 		2737457A1A89B7F400E11B02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273745791A89B7F400E11B02 /* Images.xcassets */; };
 		2737457D1A89B7F400E11B02 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2737457B1A89B7F400E11B02 /* LaunchScreen.xib */; };
 		273745891A89B7F400E11B02 /* StringEmojizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273745881A89B7F400E11B02 /* StringEmojizeTests.swift */; };
+		273745941A89B81900E11B02 /* EmojiCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273745931A89B81900E11B02 /* EmojiCodes.swift */; };
+		2793B6121A89BC1500460EDF /* StringEmojize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793B6111A89BC1500460EDF /* StringEmojize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		273745821A89B7F400E11B02 /* StringEmojizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringEmojizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273745871A89B7F400E11B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273745881A89B7F400E11B02 /* StringEmojizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEmojizeTests.swift; sourceTree = "<group>"; };
+		273745931A89B81900E11B02 /* EmojiCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCodes.swift; sourceTree = "<group>"; };
+		2793B6111A89BC1500460EDF /* StringEmojize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEmojize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		2737456F1A89B7F400E11B02 /* StringEmojize */ = {
 			isa = PBXGroup;
 			children = (
+				273745921A89B80500E11B02 /* StringEmojize */,
 				273745721A89B7F400E11B02 /* AppDelegate.swift */,
 				273745741A89B7F400E11B02 /* ViewController.swift */,
 				273745761A89B7F400E11B02 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				273745871A89B7F400E11B02 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		273745921A89B80500E11B02 /* StringEmojize */ = {
+			isa = PBXGroup;
+			children = (
+				273745931A89B81900E11B02 /* EmojiCodes.swift */,
+				2793B6111A89BC1500460EDF /* StringEmojize.swift */,
+			);
+			name = StringEmojize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2793B6121A89BC1500460EDF /* StringEmojize.swift in Sources */,
+				273745941A89B81900E11B02 /* EmojiCodes.swift in Sources */,
 				273745751A89B7F400E11B02 /* ViewController.swift in Sources */,
 				273745731A89B7F400E11B02 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +421,7 @@
 				2737458E1A89B7F400E11B02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2737458F1A89B7F400E11B02 /* Build configuration list for PBXNativeTarget "StringEmojizeTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +430,7 @@
 				273745911A89B7F400E11B02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
