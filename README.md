@@ -20,8 +20,8 @@ import StringEmojize
 ## Methods
 
 ```swift
-func emojizedString() -> String
-func emojizedStringWithString(text: String) -> String
+public func emojizedString() -> String
+public func emojizedStringWithString(text: String) -> String
 ```
 
 ---
