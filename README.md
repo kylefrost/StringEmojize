@@ -3,11 +3,16 @@
 
 ## Getting Started
 
-Simply add the StringEmojize folder at the root of this repo to your project. Swift doesn't require you to import the files. (CocoaPods Coming Soon)
+Simply add the StringEmojize folder at the root of this repo to your project. Swift doesn't require you to import the files (see below for CocoaPods).
 
 ```swift
 var emojiCodeString = "This string has an Emoji :+1:"
 println(emojiCodeString.emojizedString())
+```
+
+*If you are installing with CocoaPods, you will need to import*
+```swift
+import StringEmojize
 ```
 
 ---

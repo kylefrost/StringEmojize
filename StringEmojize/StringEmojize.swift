@@ -10,11 +10,11 @@ import Foundation
 
 extension String {
     
-    func emojizedString() -> String {
+    public func emojizedString() -> String {
         return self.emojizedStringWithString(self)
     }
     
-    func emojizedStringWithString(text: String) -> String {
+    public func emojizedStringWithString(text: String) -> String {
         var onceToken: dispatch_once_t = 0
         var regex = NSRegularExpression()
         
