@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/kylefrost/StringEmojize'
   s.authors  = {'Kyle Frost' => 'kyle@kylefrost.me'}
   s.source   = { :git => 'https://github.com/kylefrost/StringEmojize.git', :tag => 'v0.1.1' }
-  s.platform = :ios
+  s.platform = :ios, '8.0'
   s.source_files = 'StringEmojize'
   s.requires_arc = true
 
