@@ -8,6 +8,8 @@
 
 import Foundation
 
+private let EmojiRegex = NSRegularExpression(pattern: "(:[a-z0-9-+_]+:)", options: .CaseInsensitive, error:nil)!
+
 extension String {
     
     public func emojizedString() -> String {
@@ -15,22 +17,15 @@ extension String {
     }
     
     public func emojizedStringWithString(text: String) -> String {
-        var onceToken: dispatch_once_t = 0
-        var regex = NSRegularExpression()
-        
-        dispatch_once(&onceToken) {
-            regex = NSRegularExpression(pattern: "(:[a-z0-9-+_]+:)", options: .CaseInsensitive, error:nil)!
-        }
-        
         var resultText = text
         let matchingRange = NSMakeRange(0, resultText.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
-        regex.enumerateMatchesInString(resultText, options: .ReportCompletion, range: matchingRange, usingBlock: {
+        EmojiRegex.enumerateMatchesInString(resultText, options: .ReportCompletion, range: matchingRange, usingBlock: {
             (result: NSTextCheckingResult!, flags: NSMatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
                 if ((result != nil) && (result.resultType == .RegularExpression)) {
                     let range = result.range
                     if (range.location != NSNotFound) {
                         var code = (text as NSString).substringWithRange(range)
-                        var unicode = self.emojiAliases(code)
+                        var unicode = EMOJI_HASH[code]!
                         if !unicode.isEmpty {
                             resultText = resultText.stringByReplacingOccurrencesOfString(code, withString:unicode, options: nil, range: nil)
                         }
@@ -39,16 +34,5 @@ extension String {
         })
         
         return resultText
-    }
-    
-    func emojiAliases(key: String) -> String {
-        //var myDict = Dictionary<String, String>()
-        var value: String = ""
-        var onceToken: dispatch_once_t = 0
-        dispatch_once(&onceToken) {
-            value = EMOJI_HASH[key]!
-        }
-        
-        return value
     }
 }
